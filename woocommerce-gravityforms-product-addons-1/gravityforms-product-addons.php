@@ -31,8 +31,8 @@ if (is_woocommerce_active()) {
 
 	load_plugin_textdomain('wc_gf_addons', null, dirname(plugin_basename(__FILE__)) . '/languages');
 
-	//if (defined('DOING_AJAX'))
-	include 'gravityforms-product-addons-ajax.php';
+	if (defined('DOING_AJAX'))
+		include 'gravityforms-product-addons-ajax.php';
 	class woocommerce_gravityforms {
 		var $settings;
 		var $edits = array();
